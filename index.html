@@ -190,7 +190,7 @@
         <p>Prefer Instagram? Message <a class="link" style="text-transform:none;letter-spacing:0.02em" href="https://www.instagram.com/timelesstakes____/" target="_blank" rel="noopener">@timelesstakes____</a></p>
       </div>
 
-      <form class="form" id="enquiry-form" novalidate>
+      <form class="form" id="enquiry-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
         <!-- Web3Forms (free): get a key at web3forms.com and paste it below -->
         <input type="hidden" name="access_key" value="7185311e-40e6-4728-935d-8597af14acbd">
         <input type="hidden" name="subject" value="New wedding enquiry · Timeless Takes">
@@ -326,7 +326,7 @@
       const data = await res.json();
       if (!data.success) throw new Error(data.message);
       form.reset();
-      status.textContent = 'Thank you. Your enquiry is with us and we'll reply personally.';
+      status.textContent = "Thank you. Your enquiry is with us and we'll reply personally.";
     } catch (err) {
       status.textContent = 'Your enquiry did not send. Please try again, or email timelesstakesphotography0@gmail.com.';
       status.classList.add('error');
