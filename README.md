@@ -11,15 +11,12 @@ A one-page static site: plain HTML and CSS, no build step, no monthly fees.
 ## 1. Add your photos
 Drop JPEGs into `images/` with these exact names. Any slot without a photo shows a labelled placeholder, so you can add them one at a time.
 
-| File | Shape | Suggested picture |
+| File | Shape | Where |
 |---|---|---|
-| `hero-1.jpg` | tall 2:3 | your strongest couple portrait |
-| `hero-2.jpg` | 4:5 | a candid or detail frame |
-| `work-1.jpg` | wide 3:2 | Tamil/Hindu ceremony moment |
-| `work-2.jpg` | 4:5 | clifftop pre-wedding |
-| `work-3.jpg` | tall 2:3 | Catholic ceremony |
-| `work-4.jpg` | wide 3:2 | woodland golden hour |
-| `about.jpg` | 4:5 | a quiet behind-the-scenes or detail frame (no faces needed) |
+| `hero-1.jpg` | tall 2:3 | main hero image |
+| `hero-2.jpg` | 4:5 | small hero image |
+| `work-*.jpg` | tall 2:3 | Selected work, three across (order is set in `index.html`) |
+| `about.jpg` | 4:5 | About section |
 | `og-image.jpg` | 1200x630 | the picture shown when the link is shared |
 
 Export from Lightroom at about 2000px on the long edge, quality 75 to 80, so each file stays under ~500 KB. Change the captions in `index.html` if the pictures differ.

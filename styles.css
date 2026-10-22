@@ -195,26 +195,17 @@ p { margin: 0; }
 }
 .section-head p { max-width: 38rem; color: var(--ink-soft); }
 
-/* Selected work: an uneven contact sheet */
+/* Selected work: a contact sheet, three across */
 .sheet {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: clamp(0.75rem, 2vw, 1.5rem);
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem) clamp(0.75rem, 2vw, 1.5rem);
 }
-.sheet figure { margin: 0; display: grid; gap: 0.75rem; align-content: start; min-width: 0; }
+.sheet figure { grid-column: span 2; margin: 0; display: grid; gap: 0.75rem; align-content: start; min-width: 0; }
 .sheet figcaption { font-size: var(--step--1); color: var(--ink-soft); }
+/* A short last row sits centred instead of hanging left */
+.sheet figure:nth-last-child(2):nth-child(3n+1) { grid-column: 2 / span 2; }
 .sheet figcaption b { font-weight: 400; color: var(--ink); }
-.s1 { grid-column: 1 / span 7; }
-.s2 { grid-column: 9 / span 4; margin-top: 18%; }
-.s3 { grid-column: 2 / span 4; }
-.s4 { grid-column: 7 / span 6; margin-top: 10%; }
-.s5 { grid-column: 7 / span 4; }
-.s6 { grid-column: 2 / span 4; margin-top: 14%; }
-.s7 { grid-column: 9 / span 4; }
-.s8 { grid-column: 3 / span 4; }
-.s9 { grid-column: 8 / span 4; }
-.s10 { grid-column: 2 / span 4; }
 .sheet-foot {
   display: flex;
   justify-content: space-between;
@@ -387,8 +378,8 @@ p { margin: 0; }
   .about .frame { max-width: 26rem; }
 }
 @media (max-width: 600px) {
-  .sheet { grid-template-columns: minmax(0, 1fr); }
-  .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10 { grid-column: auto; margin-top: 0; }
+  .sheet { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sheet figure, .sheet figure:nth-last-child(2):nth-child(3n+1) { grid-column: auto; }
   .ceremonies { grid-template-columns: minmax(0, 1fr); }
   .ceremony, .ceremony:nth-child(even) { padding: 1.75rem 0 2rem; border-left: 0; }
   .steps { grid-template-columns: minmax(0, 1fr); }
