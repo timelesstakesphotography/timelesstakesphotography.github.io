@@ -211,6 +211,7 @@ p { margin: 0; }
 .s4 { grid-column: 7 / span 6; margin-top: 10%; }
 .s5 { grid-column: 7 / span 4; }
 .s6 { grid-column: 2 / span 4; margin-top: 14%; }
+.s7 { grid-column: 9 / span 4; }
 .sheet-foot {
   display: flex;
   justify-content: space-between;
@@ -384,7 +385,7 @@ p { margin: 0; }
 }
 @media (max-width: 600px) {
   .sheet { grid-template-columns: minmax(0, 1fr); }
-  .s1, .s2, .s3, .s4, .s5, .s6 { grid-column: auto; margin-top: 0; }
+  .s1, .s2, .s3, .s4, .s5, .s6, .s7 { grid-column: auto; margin-top: 0; }
   .ceremonies { grid-template-columns: minmax(0, 1fr); }
   .ceremony, .ceremony:nth-child(even) { padding: 1.75rem 0 2rem; border-left: 0; }
   .steps { grid-template-columns: minmax(0, 1fr); }
